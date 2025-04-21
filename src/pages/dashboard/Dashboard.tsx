@@ -35,7 +35,7 @@ const Dashboard = () => {
   const {expenses, error, isLoading} = useExpenses();
 
   return (
-  <div>
+  <div className="container">
     {isLoading && <p>{isLoading} is Loading....</p>}
     {error && <p>{error}</p>}
     <ExpenseList expenses={expenses}/>
