@@ -32,8 +32,9 @@ const ExpenseList = ({expenses}:Props) => {
             Expense
             <span className="float-end">Amount</span>
         </h5>
+        {/* each child in the list should have a unique key prop. */}
         <div className="card-body">
-            {expenses.map(expense => <div>
+            {expenses.map(expense => <div key={expense.expenseId} >
             <div className="d-flex justify-content-between border-bottom-1 p-3 text-dark">
                  <div className="card-title m-0">
                   <h5>{/* water Bill */}{expense.name}</h5>
